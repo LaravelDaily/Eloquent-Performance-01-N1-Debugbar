@@ -14,6 +14,9 @@ class PostController extends Controller
         // The correct way with Eager loading:
         // $posts = Post::with('user')->get();
 
+        // Or you can load the relationship later
+        // $posts->load('user');
+
         return view('posts.index', compact('posts'));
     }
 }

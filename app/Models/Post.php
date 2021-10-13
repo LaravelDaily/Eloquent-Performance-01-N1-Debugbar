@@ -9,6 +9,9 @@ class Post extends Model
 {
     use HasFactory;
 
+    // Always eager load the relationship? But use with caution!
+    // protected $with = ['user'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
